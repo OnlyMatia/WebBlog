@@ -1,7 +1,18 @@
 <%- include("partials/header.ejs") %>
 
+<main class="container">
+
+
 <h1>Početna</h1>
+<div>
+<% posts.forEach((posts) => { %>
+    <h3> <%= posts.title %> </h3>
+    <p> <%= posts.content %> </p>
+    <hr>
+<% }); %>
+</div>
 
 
+</main>
 
 <%- include("partials/footer.ejs") %>

@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get("/", (req, res) => {
-    res.render("home.ejs");
+    res.render("home.ejs", {posts});
 });
 
 app.get("/compose", (req, res) => {
@@ -22,7 +22,14 @@ app.get("/contact", (req, res) => {
     res.render("contact.ejs");
 });
 
+app.post("/create", (req, res) => {
+    const title = req.body["title"];
+    const content = req.body["content"];
+    const postObj = {title:title, content:content};
 
+    posts.push(postObj);
+    res.redirect("/");
+});
 
 
 app.listen(port, () => {

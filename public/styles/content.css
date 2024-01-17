@@ -2,3 +2,26 @@
     padding: 3em 5em;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+#title{
+    width: 50%;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#content{
+    width: 50%;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.btn1{
+    width: 80px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+}
